@@ -2,6 +2,7 @@ package finalSimulation
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
+
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
@@ -172,6 +173,7 @@ class VideoGameFullTestTemplate extends Simulation {
       rampUsers(userCount) during (rampDuration)
     ).protocols(httpConf)
   )
+
 
 
 
