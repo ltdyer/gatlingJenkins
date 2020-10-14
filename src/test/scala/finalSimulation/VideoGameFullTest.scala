@@ -11,6 +11,7 @@ import scala.util.Random
 
 class VideoGameFullTest extends Simulation {
 
+
     val httpConf = http
         .baseUrl("http://video-game-db.eu-west-2.elasticbeanstalk.com/app/")
         .header("Accept", "application/json")
@@ -113,5 +114,6 @@ class VideoGameFullTest extends Simulation {
     after {
         println("Stress test completed")
     }
+
 
 }

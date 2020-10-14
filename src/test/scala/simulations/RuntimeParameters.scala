@@ -2,6 +2,7 @@ package simulations
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
+
 import scala.concurrent.duration._
 
 class RuntimeParameters extends Simulation{
@@ -44,5 +45,6 @@ class RuntimeParameters extends Simulation{
         rampUsers(userCount) during (rampDuration seconds)
     )).protocols(httpConf)
         .maxDuration(testDuration seconds)
+
 
 }

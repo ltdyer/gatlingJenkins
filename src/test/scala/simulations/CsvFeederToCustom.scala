@@ -3,6 +3,7 @@ package simulations
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
+
 class CsvFeederToCustom extends Simulation{
 
     val httpConf = http.baseUrl("http://localhost:8080/app/")
@@ -27,4 +28,5 @@ class CsvFeederToCustom extends Simulation{
 
 
     setUp(scn.inject(atOnceUsers(1))).protocols(httpConf)
+
 }

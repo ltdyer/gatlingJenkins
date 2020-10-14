@@ -3,7 +3,9 @@ package simulations
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
+
 class CsvFeeder extends Simulation{
+
 
   val httpConf = http.baseUrl("http://localhost:8080/app/")
     .header("Accept", "application/json")
@@ -21,9 +23,11 @@ class CsvFeeder extends Simulation{
     }
   }
 
+
   val scn = scenario("csv feeder test")
     .exec(getSpecificVideoGame())
 
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpConf)
+
 }

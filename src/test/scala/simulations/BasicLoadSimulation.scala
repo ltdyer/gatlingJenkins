@@ -2,6 +2,7 @@ package simulations
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
+
 import scala.concurrent.duration._
 
 class BasicLoadSimulation extends Simulation{
@@ -38,5 +39,6 @@ class BasicLoadSimulation extends Simulation{
         rampUsers(10) during(10 seconds)
     ).protocols(httpConf.inferHtmlResources())
 )
+
 
 }
